@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+urls=$(cat adp-* | grep -oP 'href="[^"]+' | \
+  sed -r -e 's;^href=";https://www.adpworld.de;' -e 's/\&amp;/\&/g')
+
+# if you get wrong/missing document types, check this regex!
+types=$(cat adp-* | grep -oP '>(VERD|AN|SV)<' | sed -r -e 's/[<>]//g')
+
+dates=$(cat adp-* | grep -oP '>[0-9]{2}\.[0-9]{2}.[0-9]{4}<' | sed -r -e 's/[<>]//g')
+
+
+len=$(echo -e "$urls" | wc -l)
+
+n=0
+for l in $(seq 1 $len); do
+  url=$(echo -e "$urls" | sed -n "$l p")
+  type=$(echo -e "$types" | sed -n "$l p")
+  date=$(echo -e "$dates" | sed -n "$l p")
+  curl "$url" \
+  -H @headers.txt \
+  > "${n}--${type}-${date}.pdf"
+  n=$((n + 1))
+done
