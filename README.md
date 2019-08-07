@@ -15,7 +15,7 @@ cumbersome to use.
 * Firefox (Chrome also works but the UI is a little different and not described
   below)
 * curl 7.55 or newer
-* basic Linux tools
+* basic GNU tools (Bash, sed, cat, ...)
 
 ## how?
 
