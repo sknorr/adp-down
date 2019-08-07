@@ -3,10 +3,12 @@
 Download all your PDFs from the ADP World page via script instead of having
 to click on/download all of them individually.
 
-There is an existing, generally more convenient Python script from Dominik H.
+There is an existing, more convenient Python script from @asdil12
 that unfortunately is limited by its inability to interpret Javascript and
-can only download the last 20 PDFs. This one allows you to download
-everything but is a bit more work to use.
+can only download the last 20 PDFs.
+
+The script from this repo allows you to download everything but is more
+cumbersome to use.
 
 ## how?
 
