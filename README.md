@@ -10,6 +10,13 @@ can only download the last 20 PDFs.
 The script from this repo allows you to download everything but is more
 cumbersome to use.
 
+## dependencies
+
+* Firefox (Chrome also works but the UI is a little different and not described
+  below)
+* curl 7.55 or newer
+* basic Linux tools
+
 ## how?
 
 1. Clone this repo. `cd` to the cloned repo.
