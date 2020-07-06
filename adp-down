@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-urls=$(cat adp-* | grep -oP 'href="[^"]+' | \
+urls=$(cat adp-url-* | grep -oP 'href="[^"]+' | \
   sed -r -e 's;^href=";https://www.adpworld.de;' -e 's/\&amp;/\&/g')
 
 # if you get wrong/missing document types, check this regex!
