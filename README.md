@@ -32,7 +32,7 @@ cumbersome to use.
    files for the download later.)
 
 5. Use the the `>` button at the top of the page to click through all of the
-   results pages.
+   results pages that you need downloads from.
 
 6. At the bottom of the network panel, all requests that the browser made in
    the meantime will appear.
