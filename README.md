@@ -54,6 +54,19 @@ cumbersome to use.
    * The downloaded XML files and the headers file and the script are all in the
      same directory. This directory must also be your working directory.
    * The downloaded XML files match the glob pattern `adp-url-*`
-   * Your headers file is called `headers.txt`
+   * Your headers file is called `headers.txt` and looks approximately like this:
+     ```
+     Host: www.adpworld.de
+     User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+     Accept-Language: en-US,en;q=0.5
+     Accept-Encoding: gzip, deflate, br
+     Referer: https://www.adpworld.de/wps/myportal/ADPWorld/Applications/Archiv/ePayslip/
+     Connection: keep-alive
+     Cookie: <VERY LONG COOKIE STRING> 
+     Upgrade-Insecure-Requests: 1
+     Pragma: no-cache
+     Cache-Control: no-cache
+     ```
 
 11. Run the script: `./adp-down`
